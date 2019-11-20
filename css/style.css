@@ -149,7 +149,8 @@ body {
         border: 1px solid #d00d2f;
         box-sizing: border-box;
         color: #fff;
-        outline: none; }
+        outline: none;
+        transition: 0.5s; }
         .full-first-page_left-box_block_button > button:hover {
           cursor: pointer;
           border: 1px solid #d00d2f;
@@ -179,11 +180,11 @@ body {
         max-width: 600px;
         background: #d3d3d3;
         flex: 9;
-        position: relative;
-        background-size: cover; }
+        position: relative; }
         .full-first-page_right-box_slider > .images > img {
           width: 100%;
-          height: 100%; }
+          height: 100%;
+          object-fit: cover; }
         .full-first-page_right-box_slider > .images > .slider-buttons {
           display: flex;
           position: absolute;
@@ -198,7 +199,8 @@ body {
             display: flex;
             align-items: center;
             justify-content: center;
-            outline: none; }
+            outline: none;
+            border: none; }
             .full-first-page_right-box_slider > .images > .slider-buttons > .slider-buttons_left > img {
               height: 20px; }
             .full-first-page_right-box_slider > .images > .slider-buttons > .slider-buttons_left:hover {
@@ -210,7 +212,8 @@ body {
             display: flex;
             align-items: center;
             justify-content: center;
-            outline: none; }
+            outline: none;
+            border: none; }
             .full-first-page_right-box_slider > .images > .slider-buttons > .slider-buttons_right > img {
               height: 20px; }
             .full-first-page_right-box_slider > .images > .slider-buttons > .slider-buttons_right:hover {
@@ -243,7 +246,7 @@ body {
   .about-text {
     position: absolute;
     top: 20%;
-    left: 20%;
+    left: 15%;
     z-index: 5;
     background-color: white;
     padding: 20px 30px 30px 30px; }
@@ -311,11 +314,13 @@ body {
     background: #d42f4c;
     z-index: 0;
     height: 100%;
-    flex: 3; }
+    width: 30%; }
   .about-right {
-    height: 100%; }
+    height: 100%;
+    width: 100%; }
     .about-right > iframe {
-      height: inherit; }
+      height: inherit;
+      width: 100%; }
 
 @media screen and (max-width: 1199px) {
   .full-first-page_left-box_block_info_text > h1 {
@@ -340,7 +345,13 @@ body {
 
   .full-first-page_right-box_slider_numbers > .checkbox {
     margin-bottom: 0;
-    font-size: 16px; } }
+    font-size: 16px; }
+
+  .about-left {
+    width: 100%; }
+
+  .about-right {
+    display: none; } }
 @media screen and (max-width: 499px) {
   .navigation {
     width: 90%; }

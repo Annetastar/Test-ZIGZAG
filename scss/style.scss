@@ -177,6 +177,7 @@ body {
           box-sizing: border-box;
           color: #fff;
           outline: none;
+          transition: 0.5s;
           &:hover {
             cursor: pointer;
             border: 1px solid #d00d2f;
@@ -213,10 +214,10 @@ body {
         background: #d3d3d3;
         flex: 9;
         position: relative;
-        background-size: cover;
         > img {
           width: 100%;
           height: 100%;
+          object-fit: cover;
         }
         > .slider-buttons {
           display: flex;
@@ -233,6 +234,7 @@ body {
             align-items: center;
             justify-content: center;
             outline: none;
+            border: none;
             > img {
               height: 20px;
             }
@@ -248,6 +250,7 @@ body {
             align-items: center;
             justify-content: center;
             outline: none;
+            border: none;
             > img {
               height: 20px;
             }
@@ -291,7 +294,7 @@ body {
   &-text {
     position: absolute;
     top: 20%;
-    left: 20%;
+    left: 15%;
     z-index: 5;
     background-color: white;
     padding: 20px 30px 30px 30px;
@@ -381,12 +384,14 @@ body {
     background: #d42f4c;
     z-index: 0;
     height: 100%;
-    flex: 3;
+    width: 30%;
   }
   &-right {
     height: 100%;
+    width: 100%;
     > iframe {
       height: inherit;
+      width: 100%;
     }
   }
 }
@@ -428,6 +433,14 @@ body {
       font-size: 16px;
     }
   }
+
+  .about-left {
+    width: 100%;
+  }
+
+  .about-right {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 499px) {
@@ -446,7 +459,3 @@ body {
   }
 }
 
-
-//@media screen and (max-height: 510px){
-//
-//}
