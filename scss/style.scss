@@ -4,6 +4,12 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+.main {
+  height: 100%;
+  transition: all 1000ms ease 0s;
+  transform: translate3d(0px, 0px, 0px);
+}
+
 #menu {
   display: none;
   > .menu-open {
@@ -170,6 +176,7 @@ body {
           border: 1px solid #d00d2f;
           box-sizing: border-box;
           color: #fff;
+          outline: none;
           &:hover {
             cursor: pointer;
             border: 1px solid #d00d2f;
@@ -181,10 +188,10 @@ body {
     }
   }
   &_right-box {
-    flex-grow: 4;
-    flex-shrink: 1;
-    flex-basis: 0;
+    flex: 4;
     background: #d42f4c;
+    color: #fff;
+    z-index: 5;
     > img {
       position: absolute;
       height: 90%;
@@ -277,16 +284,133 @@ body {
   }
 }
 
-@media screen and (max-width: 1199px){
-  .full-first-page_left-box_block_info_text {
-    > h1 {
-      font-size: 40px;
-      margin-top: 60px;
+.about {
+  display: flex;
+  height: 100%;
+  position: relative;
+  &-text {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    z-index: 5;
+    background-color: white;
+    padding: 20px 30px 30px 30px;
+    &_phone {
+      > p:first-child {
+        font-size: 10px;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #d00d2f;
+      }
+      > p {
+        font-size: 18px;
+        font-weight: 700;
+      }
+      > p:nth-child(2) a {
+        color: #000;
+        text-transform: none;
+      }
+    }
+    &_email {
+      > p:first-child {
+        font-size: 10px;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #d00d2f;
+      }
+      > p {
+        font-size: 18px;
+        font-weight: 700;
+      }
+      > p:nth-child(2) a {
+        color: #000;
+        text-transform: none;
+      }
+    }
+    &_address {
+      > p:first-child {
+        font-size: 10px;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #d00d2f;
+      }
+      > p {
+        font-size: 18px;
+        font-weight: 700;
+      }
+      > p:nth-child(2) a {
+        color: #000;
+        text-transform: none;
+      }
+    }
+    &_social {
+      > a {
+        font-size: 13px;
+        font-weight: 700;
+        color: #d00d2f;
+        text-transform: uppercase;
+        text-decoration: none;
+        margin-right: 30px;
+      }
+    }
+    &_button {
+        width: 300px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        background: #d00d2f;
+        border: 1px solid #d00d2f;
+        box-sizing: border-box;
+        color: #fff;
+        outline: none;
+        margin-top: 3%;
+        &:hover {
+          cursor: pointer;
+          border: 1px solid #d00d2f;
+          color: #d00d2f;
+          background-color: white;
+        }
+    }
+  }
+
+  &-left {
+    background: #d42f4c;
+    z-index: 0;
+    height: 100%;
+    flex: 3;
+  }
+  &-right {
+    height: 100%;
+    > iframe {
+      height: inherit;
     }
   }
 }
 
-@media screen and (max-width: 830px){
+@media screen and (max-width: 1199px){
+  .full-first-page_left-box_block_info_text {
+    > h1 {
+      font-size: 40px;
+      margin-top: 40px;
+    }
+  }
+}
+
+@media screen and (max-width: 900px), screen and (max-height: 670px){
+  .full-first-page_right-box_slider {
+    width: calc(40% - 0px);
+  }
+  .full-first-page_left-box_block_info_text > p {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 830px), screen and (max-height: 570px) {
   .full-first-page_left-box_block_info_text {
     display: none;
   }
@@ -296,13 +420,17 @@ body {
   }
   .full-first-page_right-box_slider {
     width: 80%;
-    > .images {
+  }
 
+  .full-first-page_right-box_slider_numbers {
+    > .checkbox {
+      margin-bottom: 0;
+      font-size: 16px;
     }
   }
 }
 
-@media screen and (max-width: 499px){
+@media screen and (max-width: 499px) {
   .navigation {
     width: 90%;
   }
@@ -317,3 +445,8 @@ body {
     padding-left: 20%;
   }
 }
+
+
+//@media screen and (max-height: 510px){
+//
+//}
